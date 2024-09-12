@@ -1,0 +1,22 @@
+<h2>Available Needs</h2>
+
+<div class="input-container" *ngIf="admin">
+  <label for="new-need">Need Name:</label>
+  <input id="new-need" #needName />
+  <button type="button" class="add-button" (click)="add(needName.value); needName.value=''">
+    Create Need
+  </button>
+</div>
+
+<app-need-search></app-need-search>
+<select [(ngModel)]="sortBy" (change)="ngSortingChange()">
+  <option *ngFor="let mode of sorting" [value]="mode.key">{{mode.value}}</option>
+</select>
+<ul class="needs">
+  <li *ngFor="let need of needs" class="need-item">
+    <a routerLink="/detail/{{need.id}}" class="need-data">
+      <span class="badge">{{need.title}}</span> <span class="cost-badge"> ${{need.cost}}</span><span class="urgency-badge">Urgency: {{need.urgency}}</span>
+    </a>
+    <button *ngIf="admin" type="button" class="delete" title="delete need" (click)="delete(need)">x</button>
+  </li>
+</ul>

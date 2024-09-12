@@ -1,0 +1,51 @@
+/* HeroDetailComponent's private CSS styles */
+label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 1em;
+  vertical-align: top;
+  text-align: left;
+}
+
+.information-wrapper{
+  background-color: #5D5D81;
+  padding-left: 5rem;
+}
+
+.input-wrapper {
+  margin: 1em;
+  text-align: left;
+}
+
+input, textarea {
+  font-size: 1em;
+  padding: .5rem;
+  border: 2px solid gray;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 80%;
+  min-height: 1em;
+}
+
+button {
+  margin-top: 20px;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+
+button:disabled {
+  background-color: #eee;
+  color: #4A4238;
+  cursor: auto;
+}
+
+.helper-output{
+  text-align: left;
+  width: auto;
+  max-width: 85%;
+}

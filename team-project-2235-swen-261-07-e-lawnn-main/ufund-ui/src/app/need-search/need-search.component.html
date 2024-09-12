@@ -1,0 +1,15 @@
+<div id="search-component">
+  <div class="search-container">
+    <label for="search-box">Search Needs:</label>
+    <input placeholder="search available needs" #searchBox id="search-box" (input)="search(searchBox.value)" />
+  </div>
+  <div class="result-container">
+    <ul class="search-result">
+      <li *ngFor="let need of inventory$ | async">
+        <a routerLink="/detail/{{need.id}}">
+          {{need.title}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

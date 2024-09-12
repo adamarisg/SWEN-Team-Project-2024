@@ -1,0 +1,23 @@
+button {
+    margin-top: 20px;
+    background-color: rgb(64, 64, 64);
+    padding: 1rem;
+    border-radius: 7px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: gray;
+}
+
+button:disabled {
+    background-color: #eee;
+    color: #4A4238;
+    cursor: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: scroll;
+}

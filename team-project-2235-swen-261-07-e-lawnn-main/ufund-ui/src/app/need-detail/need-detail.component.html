@@ -1,0 +1,35 @@
+<div *ngIf="need">
+  <h2>{{need.title | titlecase}} Details</h2>
+  <div id="information" class="information-wrapper">
+    <div class="input-wrapper">
+      <label for="need-name">Title:</label>
+      <input *ngIf="admin" id="need-name" [(ngModel)]="need.title" placeholder="Name">
+      <label *ngIf="admin==false" class="helper-output"> {{need.title}}</label>
+    </div>
+    <div class="input-wrapper">
+      <label for="need-description">Description:</label>
+      <textarea *ngIf="admin" id="need-description" [(ngModel)]="need.description" placeholder="Description"></textarea>
+      <label *ngIf="admin==false" class="helper-output"> {{need.description}}</label>
+    </div>
+    <div class="input-wrapper">
+      <label for="need-cost">Cost:</label>
+      <input *ngIf="admin" type="number" id="need-cost" [(ngModel)]="need.cost" placeholder="Cost">
+      <label *ngIf="admin==false" class="helper-output"> {{need.cost}}</label>
+    </div>
+    <div class="input-wrapper">
+      <label for="need-urgency">Urgency:</label>
+      <input *ngIf="admin" type="number" id="need-urgency" [(ngModel)]="need.urgency" placeholder="Urgency" required min="1" max="10" >
+      <label *ngIf="admin==false" class="helper-output">{{need.urgency}}</label>
+    </div>
+  </div>
+  <div class="button-wrapper">
+    <button type="button" (click)="goBack()">Back</button>
+    <button *ngIf="admin==false && inCart==false" type="button" (click)="addToCart()">
+      Add To Cart
+    </button>
+    <button *ngIf="admin==false && inCart==true" type="button" (click)="addToCart()">
+      Remove From Cart
+    </button>
+    <button *ngIf="admin" type="button" (click)="save()">Save</button>
+  </div>
+</div>

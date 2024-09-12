@@ -1,0 +1,14 @@
+<div>
+    <div *ngIf="loggedIn==false">
+        <input type="text" placeholder="enter username" #usernameInputBox [(ngModel)]="username">
+        <button routerLink="/dashboard" (click)="login()">Login</button>
+    </div>
+    <!-- <div>
+        <label>REMOVE THIS: LoggedIn? {{loggedIn}}  Admin? {{admin}}</label>
+    </div> -->
+    <div *ngIf="loggedIn">
+        <label>Logged in as {{username}}</label>
+        <button routerLink="/dashboard" (click)="logout()">Logout</button>
+    </div>
+    
+</div>

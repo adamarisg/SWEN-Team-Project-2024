@@ -1,0 +1,10 @@
+<ul>
+    <li><a routerLink="/dashboard">Home</a></li>
+    <li><a routerLink="/inventory">Inventory</a></li>
+    <li style="float:right">
+        <a *ngIf="loggedIn==true && admin==false" 
+        routerLink="/cart">Shopping Cart</a>
+    </li>
+</ul>
+<router-outlet></router-outlet>
+<app-messages *ngIf="admin"></app-messages>

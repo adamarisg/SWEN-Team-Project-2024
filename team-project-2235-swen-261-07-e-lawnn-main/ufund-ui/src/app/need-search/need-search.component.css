@@ -1,0 +1,68 @@
+/* HeroSearch private styles */
+
+label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+  input {
+    padding: .5rem;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+  }
+  
+  input:focus {
+    outline: #336699 auto 1px;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+
+  #search-component {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .search-container {
+    margin-bottom: 1rem; /* Add space between search bar and results */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-result {
+    width: 100%;
+    max-width: 600px; /* Match the width of the search bar */
+    padding-left: 0;
+  }
+  
+  .search-result li {
+    list-style-type: none;
+  }
+  
+  .search-result li a {
+    display: block;
+    border-bottom: 1px solid 000505;
+    padding: .5rem;
+    text-decoration: none;
+    color: black;
+    background-color: #BFCDE0;
+  }
+  
+  .search-result li a:hover {
+    color: white;
+    background-color: #5D5D81;
+  }
+  
+  ul.search-result {
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  #search-box{
+    border: 1px solid white;
+    border-radius: 2em;
+  }

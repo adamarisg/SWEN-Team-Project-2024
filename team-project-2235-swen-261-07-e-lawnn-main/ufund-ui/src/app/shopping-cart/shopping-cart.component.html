@@ -1,0 +1,16 @@
+<h1>Shopping Cart:</h1>
+<ul>
+    <li *ngFor="let need of cart">
+        <div>
+            <a routerLink="/detail/{{need.id}}">
+                <span>{{need.title}}</span><span> ${{need.cost}}</span><span class="urgency-badge">Urgency: {{need.urgency}}</span>
+            </a>
+            <button type="button" class="delete" (click)="removeFromCart(need.id)">
+                Remove From Cart
+            </button>
+        </div>
+    </li>
+</ul>
+<label *ngIf="cart.length == 0">Shopping Cart is Empty.</label>
+<button *ngIf="cart.length > 0" (click)="checkout(false)">Empty Cart</button>
+<button *ngIf="cart.length > 0" (click)="checkout(true)">Checkout</button>
